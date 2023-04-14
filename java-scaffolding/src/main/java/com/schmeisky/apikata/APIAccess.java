@@ -1,55 +1,26 @@
 package com.schmeisky.apikata;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import com.schmeisky.apikata.adapters.ApiFetchWeatherDataAdapter;
+import com.schmeisky.apikata.adapters.CsvExporterAdapter;
+import com.schmeisky.apikata.adapters.WeatherFetchCommandlineAdapter;
+import com.schmeisky.apikata.business.WeatherApp;
+import com.schmeisky.apikata.ports.ExporterPort;
+import com.schmeisky.apikata.ports.FetchWeatherDataPort;
+import com.schmeisky.apikata.ports.WeatherFetchTriggerPort;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import java.nio.charset.Charset;
-
-import java.util.List;
-import java.util.Map;
-
-import com.google.gson.Gson;
-
 public class APIAccess {
 
-    public static void main(final String[] args) {
-        try {
-            final URL url = new URL("http://apis.is/weather/observations/en?stations=1");
-            try(InputStream inputStream = url.openStream();
-                    InputStreamReader inputStreamReader = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
-            ) {
-                final Gson gson = new Gson();
-                final Result result = gson.fromJson(inputStreamReader, Result.class);
-                System.out.println(result);
-            }
-        } catch (MalformedURLException e) {
-            throw new RuntimeException("unable to parse URL", e);
-        } catch (IOException e) {
-            throw new RuntimeException("unable to readData", e);
-        }
+    private static final String STATIONS_LIST= "1,422";
+
+    public static void main(final String[] args) throws MalformedURLException {
+        FetchWeatherDataPort dataPort = new ApiFetchWeatherDataAdapter(new URL("https://apis.is/weather/observations/en?stations=" + STATIONS_LIST));
+        ExporterPort exporterPort = new CsvExporterAdapter();
+        WeatherFetchTriggerPort fetchTriggerPort = new WeatherFetchCommandlineAdapter();
+        WeatherApp app = new WeatherApp(dataPort, exporterPort, fetchTriggerPort);
+        fetchTriggerPort.fetch();
     }
 
-    public static class Result {
-
-        List<Map<String, Object>> results;
-
-        public Result(final List<Map<String, Object>> results) {
-            this.results = results;
-        }
-
-        public List<Map<String, Object>> getResults() {
-            return results;
-        }
-
-        @Override
-        public String toString() {
-            return "Result{" +
-                    "results=" + results +
-                    '}';
-        }
-    }
 }

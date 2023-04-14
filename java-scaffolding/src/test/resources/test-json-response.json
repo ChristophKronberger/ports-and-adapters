@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "name": "Reykjavík",
+      "time": "2023-04-14 09:00:00",
+      "err": "",
+      "link": "http://en.vedur.is/weather/observations/areas/reykjavik/#group=100&station=1",
+      "F": "1",
+      "FX": "3",
+      "FG": "4",
+      "D": "E",
+      "T": "4.1",
+      "W": "Partly cloudy",
+      "V": ">70",
+      "N": "50",
+      "P": "1009",
+      "RH": "84",
+      "SNC": "",
+      "SND": "",
+      "SED": "",
+      "RTE": "",
+      "TD": "1.5",
+      "R": "0.0",
+      "id": "1",
+      "valid": "1"
+    }
+  ]
+}

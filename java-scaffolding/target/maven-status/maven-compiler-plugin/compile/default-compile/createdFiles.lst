@@ -1,0 +1,12 @@
+com\schmeisky\apikata\APIAccess$Result.class
+com\schmeisky\apikata\APIAccess.class
+com\schmeisky\apikata\adapters\WeatherDataMapper.class
+com\schmeisky\apikata\adapters\TimestampParsingUtil.class
+com\schmeisky\apikata\ports\ExporterPort.class
+com\schmeisky\apikata\adapters\ApiWeatherData.class
+com\schmeisky\apikata\adapters\WeatherDataMapperImpl.class
+com\schmeisky\apikata\adapters\ApiWeatherDataAdapter.class
+com\schmeisky\apikata\adapters\ApiWeatherDataResult.class
+com\schmeisky\apikata\adapters\CsvExporterAdapter.class
+com\schmeisky\apikata\ports\WeatherData.class
+com\schmeisky\apikata\ports\WeatherDataPort.class

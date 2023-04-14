@@ -1,0 +1,10 @@
+C:\Users\christoph.kronberger\IdeaProjects\ports-and-adapters\java-scaffolding\src\main\java\com\schmeisky\apikata\adapters\ApiWeatherData.java
+C:\Users\christoph.kronberger\IdeaProjects\ports-and-adapters\java-scaffolding\src\main\java\com\schmeisky\apikata\adapters\CsvExporterAdapter.java
+C:\Users\christoph.kronberger\IdeaProjects\ports-and-adapters\java-scaffolding\src\main\java\com\schmeisky\apikata\adapters\WeatherDataMapper.java
+C:\Users\christoph.kronberger\IdeaProjects\ports-and-adapters\java-scaffolding\src\main\java\com\schmeisky\apikata\ports\WeatherData.java
+C:\Users\christoph.kronberger\IdeaProjects\ports-and-adapters\java-scaffolding\src\main\java\com\schmeisky\apikata\adapters\ApiWeatherDataResult.java
+C:\Users\christoph.kronberger\IdeaProjects\ports-and-adapters\java-scaffolding\src\main\java\com\schmeisky\apikata\adapters\TimestampParsingUtil.java
+C:\Users\christoph.kronberger\IdeaProjects\ports-and-adapters\java-scaffolding\src\main\java\com\schmeisky\apikata\adapters\ApiWeatherDataAdapter.java
+C:\Users\christoph.kronberger\IdeaProjects\ports-and-adapters\java-scaffolding\src\main\java\com\schmeisky\apikata\ports\WeatherDataPort.java
+C:\Users\christoph.kronberger\IdeaProjects\ports-and-adapters\java-scaffolding\src\main\java\com\schmeisky\apikata\ports\ExporterPort.java
+C:\Users\christoph.kronberger\IdeaProjects\ports-and-adapters\java-scaffolding\src\main\java\com\schmeisky\apikata\APIAccess.java
